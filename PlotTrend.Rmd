@@ -14,6 +14,7 @@ output:
 
 ```{r setup, include=FALSE, message=FALSE, warning=FALSE, echo=FALSE}
 library(dplyr)
+library(tibble)
 library(stringr)
 library(ggplot2)
 library(plotly)

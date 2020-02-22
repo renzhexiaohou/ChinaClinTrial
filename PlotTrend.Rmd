@@ -53,13 +53,13 @@ cPH3num <- '#85c1e9'
 # cPH3num <- 'EA4335'
 
 p <- plot_ly(data, x = ~Year) %>%
-  add_trace(y = ~PH1num, name = 'I期',type = "bar",
+  add_trace(y = ~PH1num, name = 'I',type = "bar",
             text = ~PH1num, textposition = 'inside',
             marker = list(color = cPH1num, opacity=0.9)) %>% 
-  add_trace(y = ~PH2num, name = 'II期',type = "bar",
+  add_trace(y = ~PH2num, name = 'II',type = "bar",
             text = ~PH2num, textposition = 'inside',
             marker = list(color = cPH2num, opacity=0.9)) %>%
-  add_trace(y = ~PH3num, name = 'III期',type = "bar",
+  add_trace(y = ~PH3num, name = 'III',type = "bar",
             text = ~PH3num, textposition = 'inside',
             marker = list(color = cPH3num, opacity=0.9)) %>%
   # add_text(textfont = t, textposition = "top center") %>%

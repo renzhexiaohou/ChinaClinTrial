@@ -26,7 +26,7 @@ knitr::opts_chunk$set(out.width='950px', dpi=200)
 
 # {.tabset .tabset-fade .tabset-pills}
 
-## 生物制品&化学药物 in Phase I & II & III
+## biological&chemical in Phase I & II & III
 ```{r, message=FALSE, warning=FALSE, fig.width = 4, fig.height = 2}
 
 final <- readRDS("PlotTrend.rds") %>% filter(drug %in% c("生物制品", "化学药物"))
@@ -70,46 +70,7 @@ p
 ```
 
 
-
-<!-- ## IND&BE/BA in Phase I -->
-<!-- ```{r, message=FALSE, warning=FALSE, fig.width = 4, fig.height = 2} -->
-
-<!-- final <- readRDS("PlotTrend.rds") -->
-
-<!-- Year <- summary(final$dt) %>% names() -->
-
-<!-- IND <- filter(final, phase == "I期", type == "创新药") -->
-<!-- INDnum <- summary(IND$dt) -->
-
-<!-- BEBA <- filter(final, phase == "I期", str_sub(type,1,4) == "生物等效") -->
-<!-- BEBAnum <- summary(BEBA$dt) -->
-
-<!-- data <- tibble(Year, INDnum, BEBAnum) -->
-
-
-<!-- cIND <- 'rgb(49,130,189)' -->
-<!-- cBEBA <- 'rgb(204,204,204)' -->
-<!-- # cIND <- '#60A1F0' -->
-<!-- # cBEBA <- '#00CC2C' -->
-<!-- # cIND <- '#396090' -->
-<!-- # cBEBA <- '#9C9C9C' -->
-
-<!-- p <- plot_ly(data, x = ~Year) %>% -->
-<!--   add_trace(y = ~INDnum, name = 'IND',type = "bar", -->
-<!--             text = ~INDnum, textposition = 'inside', -->
-<!--             marker = list(color = cIND, opacity=0.9)) %>%  -->
-<!--   add_trace(y = ~BEBAnum, name = 'BE/BA',type = "bar", -->
-<!--             text = ~BEBAnum, textposition = 'inside', -->
-<!--             marker = list(color = cBEBA, opacity=0.9)) %>% -->
-<!--   layout(yaxis = list(title = 'Count'), barmode = 'stack', -->
-<!--          xaxis = list(title = "", tickangle = -45)) -->
-
-<!-- p -->
-<!-- ``` -->
-
-
-
-## 生物制品&化学药物 in Phase I
+## biological&chemical in Phase I
 ```{r, message=FALSE, warning=FALSE, fig.width = 4, fig.height = 2}
 
 final <- readRDS("PlotTrend.rds")
@@ -144,7 +105,7 @@ p
 # {.tabset .tabset-fade .tabset-pills}
 
 
-## 生物制品&化学药物&中药/天然药物 in Phase I & II & III
+## biological&chemical&traditional/nature in Phase I & II & III
 ```{r, message=FALSE, warning=FALSE, fig.width = 4, fig.height = 2}
 
 final <- readRDS("PlotTrend.rds") %>% filter(drug != "其他")
@@ -188,7 +149,7 @@ p
 ```
 
 
-## 生物制品&化学药物&中药/天然药物 in Phase I
+## biological&chemical&traditional/nature in Phase I
 ```{r, message=FALSE, warning=FALSE, fig.width = 4, fig.height = 2}
 
 final <- readRDS("PlotTrend.rds")
@@ -222,7 +183,7 @@ p <- plot_ly(data, x = ~Year) %>%
 p
 ```
 
-## 生物制品&化学药物&中药/天然药物 in Phase II
+## biological&chemical&traditional/nature in Phase II
 ```{r, message=FALSE, warning=FALSE, fig.width = 4, fig.height = 2}
 
 final <- readRDS("PlotTrend.rds")
@@ -256,7 +217,7 @@ p <- plot_ly(data, x = ~Year) %>%
 p
 ```
 
-## 生物制品&化学药物&中药/天然药物 in Phase III
+## biological&chemical&traditional/nature in Phase III
 ```{r, message=FALSE, warning=FALSE, fig.width = 4, fig.height = 2}
 
 final <- readRDS("PlotTrend.rds")
@@ -290,7 +251,7 @@ p <- plot_ly(data, x = ~Year) %>%
 p
 ```
 
-## 中药/天然药物&其他 in Phase I
+## traditional/nature in Phase I
 ```{r, message=FALSE, warning=FALSE, fig.width = 4, fig.height = 2}
 
 final <- readRDS("PlotTrend.rds")
@@ -323,7 +284,7 @@ p
 
 # {.tabset .tabset-fade .tabset-pills}
 
-## 生物制品&化学药物 in Phase I & II & III LOCAL
+## biological&chemical in Phase I & II & III LOCAL
 ```{r, message=FALSE, warning=FALSE, fig.width = 4, fig.height = 2}
 final <- readRDS("comdat8164_20190710.rds") %>% 
   select("studyid", "startdt", "sponsor", "studyphase", "studytype", "drugclass", "firstsubjdt", "enddt") %>% 
@@ -445,7 +406,7 @@ p
 ```
 
 
-## 生物制品&化学药物 in Phase I LOCAL
+## biological&chemical in Phase I LOCAL
 ```{r, message=FALSE, warning=FALSE, fig.width = 4, fig.height = 2}
 
 # final <- readRDS("PlotTrend.rds")

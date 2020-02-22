@@ -13,7 +13,9 @@ output:
 
 
 ```{r setup, include=FALSE, message=FALSE, warning=FALSE, echo=FALSE}
-library(tidyverse)
+library(dplyr)
+library(stringr)
+library(ggplot2)
 library(plotly)
 
 knitr::opts_chunk$set(out.width='950px', dpi=200)
